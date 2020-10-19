@@ -1,0 +1,1 @@
+for ipad layout choose 128 layout in setup. set step length on rows to 8

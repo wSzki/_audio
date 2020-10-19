@@ -1,0 +1,35 @@
+
+// Xcode target configuration settings 
+
+PRODUCT_NAME = $TARGET_NAME
+
+// Paths
+
+C74SUPPORT = $(SRCROOT)/../../Max4_support/c74support
+HEADER_SEARCH_PATHS = "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes" "$(SRCROOT)/../../AH_MaxMSP_Headers"
+FRAMEWORK_SEARCH_PATHS = "$(C74SUPPORT)/max-includes" "$(C74SUPPORT)/msp-includes" 
+
+// Special Files
+
+GCC_PREFIX_HEADER = $(C74SUPPORT)/max-includes/macho-prefix.h
+INFOPLIST_FILE = Info.plist
+
+// Per architecture and deployment settings
+
+SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk
+
+GCC_VERSION = 4.0
+
+MACOSX_DEPLOYMENT_TARGET = 10.4
+
+ARCHS = ppc i386 
+
+COPY_PHASE_STRIP[variant=normal] = YES
+COPY_PHASE_STRIP[variant=debug] = NO
+
+// Static Configuration (don't change these)
+
+WRAPPER_EXTENSION = mxo
+WARNING_CFLAGS = -Wmost -Wno-four-char-constants -Wno-unknown-pragmas
+DEPLOYMENT_LOCATION = NO
+GENERATE_PKGINFO_FILE = YES
